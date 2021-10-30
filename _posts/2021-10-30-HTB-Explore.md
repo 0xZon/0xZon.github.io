@@ -1,7 +1,7 @@
 ---
 layout: post
 title: HTB Explore Writeup  
-subtitle: 
+subtitle: Easy Box
 tags: [HTB]
 ---
 
