@@ -2,6 +2,7 @@
 layout: post
 title: HTB Explore Writeup  
 subtitle: Easy Box
+thumbnail-img: /assets/img/explore.png
 tags: [HTB]
 ---
 
