@@ -8,6 +8,14 @@ tags: [HTB]
 
 # Notes
 ![Explore](https://raw.githubusercontent.com/0xZon/0xZon.github.io/main/assets/img/explore.png.png)
+
+
+| Name | Explore |
+| :------ |:--- |
+| OS | Android |
+| RELEASE DATE | 26 Jun 2021 |
+| DIFFICULTY | Easy |
+
 IP:10.10.10.247
 
 ## Port Scan
