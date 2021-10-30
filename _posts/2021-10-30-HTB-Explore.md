@@ -8,6 +8,7 @@ tags: [HTB]
 ---
 
 # Notes
+![Explore](https://raw.githubusercontent.com/0xZon/0xZon.github.io/main/assets/img/explore.png.png)
 IP:10.10.10.247
 
 ## Port Scan
