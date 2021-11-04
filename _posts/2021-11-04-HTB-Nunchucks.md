@@ -17,7 +17,7 @@ tags: [HTB]
 # Port Scan
 IP: 10.10.11.122
 
-Start of with a nmap scan
+Start off with a nmap scan
 ```
 nmap -p- -oN nmap/scriptScan -sC -sV 10.10.11.122
 
@@ -46,7 +46,7 @@ We can see a DNS name of `nunchucks.htb` so lets add it to our `/etc/hosts` file
 
 # nunchucks.htb 
 
-Navigating to the website we can see a sign up page but registration is currently closed.
+Navigating to the website we can see a signup page but registration is currently closed.
 
 I was not able to fuzz any other page or directory out of this
 
@@ -64,7 +64,7 @@ I'll add `store.nunchucks.htb` to my `/etc/hosts`
 
 Looking at the page there is not much besides a newsletter box. I tried to fuzz out any other page but this is it. 
 
-I tired a Server-Side Template Injection test `{{7*7}}` and the server responded with `49`, its vulnerable! After some googling I found a website that had a payload I could use to get code execution. http://disse.cting.org/2016/08/02/2016-08-02-sandbox-break-out-nunjucks-template-engine
+I tried a Server-Side Template Injection test `{{7*7}}` and the server responded with `49`, it is vulnerable! After some googling, I found a website that had a payload I could use to get code execution. http://disse.cting.org/2016/08/02/2016-08-02-sandbox-break-out-nunjucks-template-engine
 
 Request
 ```
@@ -164,7 +164,7 @@ rmdir($tmpbdir);
 printlog "Completed";
 ```
 
-Notice on line 6 it has `POSIX::setuid(0)`, this allows it to run with root privs. In order for this to work it must be SUID or have a capability. Whenever a file is ran with the SUID set it is ran with the user ID of the owner of the file, not the person executing it. Here is an example below in practice. 
+Notice on line 6 it has `POSIX::setuid(0)`, this allows it to run with root privs. For this to work, it must be SUID or have a capability. Whenever a file is ran with the SUID set it is ran with the user ID of the owner of the file, not the person executing it. Here is an example below in practice. 
 ```
 -rwxr-xr-x  1 root root 1234376 Nov  4 17:18 bash
 
@@ -185,7 +185,7 @@ root
 
 Relating it back to `backup.pl` we can see the permissions are `-rwxr-xr-x 1 root root 838 Sep  1 12:53 backup.pl`. Notice that we dont have the SUID bit set, but the script is setting it temporarily when it runs. 
 
-After enumerating `Apparmor` We can see the profile for `Perl`. The script allows `perl` to have `seduid` (allowing the script to run with root privs) but deny's access to a handful of files
+After enumerating `Apparmor` We can see the profile for `Perl`. The script allows `perl` to have `seduid` (allowing the script to run with root privs) but denies access to a handful of files
 ```
 /usr/bin/perl {
   #include <abstractions/base>
