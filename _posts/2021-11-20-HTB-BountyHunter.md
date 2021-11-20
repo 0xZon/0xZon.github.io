@@ -131,6 +131,8 @@ Then we base64 encode it and I got:
 
 Then I put in the base64 encoded string into `data=` and it returned the `/etc/passwd` file. (make sure to url encode)
 ![BountyHunter](https://raw.githubusercontent.com/0xZon/0xZon.github.io/main/assets/img/bounty_hunter/bounty_request.png)
+
+Response
 ![BountyHunter](https://raw.githubusercontent.com/0xZon/0xZon.github.io/main/assets/img/bounty_hunter/bounty_passwd.png)
 
 Now we can use the file inclusion to read the `db.php` file we discovered before. Because PHP is a server side language we cant read `db.php`. The server parses the contents and the if there is a output it will send it to the server. 
