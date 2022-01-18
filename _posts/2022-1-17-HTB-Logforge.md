@@ -78,6 +78,7 @@ server-status           [Status: 403, Size: 277, Words: 20, Lines: 10]
 ```
 
 `/admin` gives me
+
 ![Logforge](https://raw.githubusercontent.com/0xZon/0xZon.github.io/main/assets/img/logforge/1.png)
 
 While going to `/images` gives me
@@ -230,11 +231,13 @@ Then I started up wireshark and started to listen on tun0
 Then I put my payload into the username of the ftp server (because its vulnerable)
 After I went into wireshark and put on the filter `tcp.port == 1389` to view the request
 And looking at the tcp stream I can see that the username is "ippsec"
+
 ![Logforge](https://raw.githubusercontent.com/0xZon/0xZon.github.io/main/assets/img/logforge/6.png)
 
 I'll repeat the steps above except  replacing "ftp\_user" for "ftp\_password"
 
 And I have the password now
+
 ![Logforge](https://raw.githubusercontent.com/0xZon/0xZon.github.io/main/assets/img/logforge/7.png)
 
 So our ftp creds are `ippsec:log4j_env_leakage`
