@@ -2,7 +2,7 @@
 layout: post
 title: HTB GoodGames Writeup  
 subtitle: Easy Box
-thumbnail-img: /assets/img/return/logo.png
+thumbnail-img: /assets/img/goodgames/logo.png
 tags: [HTB]
 ---
 
