@@ -12,8 +12,8 @@ tags: [HTB]
 
 | Name | Return |
 | :------ |:--- |
-| OS | Windows |
-| RELEASE DATE | 27 Sept 2021 |
+| OS | Linux |
+| RELEASE DATE | 21 Feb 2022 |
 | DIFFICULTY | Easy |
 
 
