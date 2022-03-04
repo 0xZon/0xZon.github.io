@@ -29,7 +29,7 @@ Service Info: Host: goodgames.htb
 
 # HTTP 80
 
-This website looks like it is some video game site. Looking around the home page at the bottom I found `GoodGames.HTB`. I'll add the entry `10.10.11.130 goodgames.htb` to `/etc/passwd` for name resolution.
+This website looks like it is some video game site. Looking around the home page at the bottom I found `GoodGames.HTB`. I'll add the entry `10.10.11.130 goodgames.htb` to `/etc/hosts` for name resolution.
 
 I was tested a bunch of inputs for sqli and I found one that was vulnerable to a time-based blink attack. If you click on the little profile box on the top right of the main screen we get brought to a sign-in page
 
