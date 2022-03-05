@@ -100,7 +100,7 @@ Then I'm sent to another login page and the same credentials `admin:superadminis
 ![GoodGames](https://raw.githubusercontent.com/0xZon/0xZon.github.io/main/assets/img/goodgames/1cd03c6c71224d72a3cb98b8e0ce479e.png)
 
 
-Under `/settings` , I found that it was vulnerable to Server Side Template Injection. I tested this by putting "{{1+1}}" into the "Full Name section". Notice that the name changed to "2"
+Under `/settings` , I found that it was vulnerable to Server Side Template Injection. I tested this by putting `{{1+1}}` into the "Full Name section". Notice that the name changed to "2"
 
 ![GoodGames](https://raw.githubusercontent.com/0xZon/0xZon.github.io/main/assets/img/goodgames/006a86b7dcd5472bbe3f2a71695e9d42.png)
 
