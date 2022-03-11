@@ -107,10 +107,10 @@ nmap -p 22,2379,2380,8443,10249,10250,10256 -sV -sC 10.10.11.133
 ### Port Scan analysis
 
 From my scan, we have 7 open ports. 
-22 SSH
-2379 & 2380 - etcd 
-8443 - Based on the TLS certificate this is minikube, a tool that lets you run Kubernetes locally
-10249, 10250 & 10256 - https api 
+- 22 SSH
+- 2379 & 2380 - etcd 
+- 8443 - Based on the TLS certificate this is minikube, a tool that lets you run Kubernetes locally
+- 10249, 10250 & 10256 - https api 
 
 # Enumerating SSH
 Based on the SSH version being `OpenSSH 7.9p1 Debian 10+deb10u2` I think that this machine running Debain 10 Buster. I gave `Debian 10+deb10u2` a search on google and the first thing that came up was [https://packages.debian.org/buster/openssh-server](https://packages.debian.org/buster/openssh-server). From the URL and looking at the page this package is for Debain 10 Buster
