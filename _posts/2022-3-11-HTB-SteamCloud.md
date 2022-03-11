@@ -117,9 +117,9 @@ Based on the SSH version being `OpenSSH 7.9p1 Debian 10+deb10u2` I think that th
 
 # TCP 8443
 
-From [HackTricks](https://book.hacktricks.xyz/cloud-security/pentesting-kubernetes/pentesting-kubernetes-from-the-outside) this is the main Minikube API, so I'll start here
+From [HackTricks](https://book.hacktricks.xyz/cloud-security/pentesting-kubernetes/pentesting-kubernetes-from-the-outside) I learned that this is the main Minikube API, so I'll start poking around here first.
 
-Nmap got a `Forbidden` error when trying to hit this page. I'll just quickly confirm this by using `curl` the `-k` will skip the TLS/SSL verification. The results show that we do not have access
+Nmap got a `Forbidden` error when trying to hit the http page. I'll just quickly confirm this by using `curl` the `-k` will skip the TLS/SSL verification. The results show that we do not have access to the api.
 
 ```
 ┌──(root💀kali)-[~/htb]
@@ -193,8 +193,6 @@ Running `curl` against it shows some versions for Kubernetes
 ### 10249
 
 I was not able to get anything from this page, it returned a 404. I was however able to fuzz out a `/metrics` but nothing interesting was there
-
-`ffuf -w /opt/SecLists/Discovery/Web-Content/raft-medium-directories.txt -u http://10.10.11.133:10249/FUZZ -c `
 
 ### 10250
 I did the very same thing for port `10250` and this time I got a lot more output from `ffuf`
@@ -288,7 +286,7 @@ We have access to all the pods!
   ```
   
   ## Command Execution
-  Reading the documentation I found that there is a `exec` parameter that we can use to execute commands on pods! The syntax is `kubeletctl exec <command> -c <container> -p <pod> -n <namespace> [flags]`. After inputting everything my command is below and we see that we are root in the container. 
+Reading the documentation I found that there is a `exec` parameter that we can use to execute commands on pods! The syntax is `kubeletctl exec <command> -c <container> -p <pod> -n <namespace> [flags]`. After inputting everything my command is below and we see that we are root in the container. 
   
   ```
 ┌──(root💀kali)-[~/htb]
@@ -299,7 +297,7 @@ root
   # Privilege Escalation
   My go-to site for when I need to learn how to hack something is [Hack Tricks](https://book.hacktricks.xyz/). They have a nice section on [Kubernetes Enumeration](https://book.hacktricks.xyz/cloud-security/pentesting-kubernetes/kubernetes-enumeration) that I used for this box. 
   
-Looking inside that first directory listed on the site, `/run/secrets/kubernetes.io/serviceaccount`, there are three files in that directory; ca.crt, namespace, and token. These two files will let us authenticate to the `kube-apiserver` that is running on port that we did not have access to previously. 
+Looking inside that first directory listed on the site, `/run/secrets/kubernetes.io/serviceaccount`, there are three files in that directory; ca.crt, namespace, and token. These two files will let us authenticate to the `kube-apiserver` that is running on port 8443 that we did not have access to previously. 
 
 I will save the certificate to `ca.crt`
 ```
