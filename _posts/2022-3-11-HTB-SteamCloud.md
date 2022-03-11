@@ -285,7 +285,7 @@ We have access to all the pods!
 
   ```
   
-  ## Command Execution
+## Command Execution
 Reading the documentation I found that there is a `exec` parameter that we can use to execute commands on pods! The syntax is `kubeletctl exec <command> -c <container> -p <pod> -n <namespace> [flags]`. After inputting everything my command is below and we see that we are root in the container. 
   
   ```
@@ -294,7 +294,7 @@ Reading the documentation I found that there is a `exec` parameter that we can u
 root
   ```
   
-  # Privilege Escalation
+# Privilege Escalation
   My go-to site for when I need to learn how to hack something is [Hack Tricks](https://book.hacktricks.xyz/). They have a nice section on [Kubernetes Enumeration](https://book.hacktricks.xyz/cloud-security/pentesting-kubernetes/kubernetes-enumeration) that I used for this box. 
   
 Looking inside that first directory listed on the site, `/run/secrets/kubernetes.io/serviceaccount`, there are three files in that directory; ca.crt, namespace, and token. These two files will let us authenticate to the `kube-apiserver` that is running on port 8443 that we did not have access to previously. 
