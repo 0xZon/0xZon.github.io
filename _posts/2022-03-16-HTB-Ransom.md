@@ -6,7 +6,6 @@ thumbnail-img: /assets/img/ransom/ransom.png
 tags: [HTB]
 ---
 
-# Notes
 ![Ransom](https://raw.githubusercontent.com/0xZon/0xZon.github.io/main/assets/img/ransom/ransom.png)
 
 
@@ -16,7 +15,6 @@ tags: [HTB]
 | RELEASE DATE | 15 March 2022 |
 | DIFFICULTY | Medium |
 
-IP: 10.10.11.153
 
 # Port Scan
 
