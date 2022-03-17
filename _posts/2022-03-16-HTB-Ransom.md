@@ -7,7 +7,7 @@ tags: [HTB]
 ---
 
 # Notes
-![Explore](https://raw.githubusercontent.com/0xZon/0xZon.github.io/main/assets/img/ransom/ransom.png)
+![Ransom](https://raw.githubusercontent.com/0xZon/0xZon.github.io/main/assets/img/ransom/ransom.png)
 
 
 | Name | Ransom |
