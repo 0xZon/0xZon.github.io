@@ -13,7 +13,7 @@ I had to figure out a way to send a reverse shell to my Windows 10 machine and h
 
 ![MobaX](https://raw.githubusercontent.com/0xZon/0xZon.github.io/main/assets/img/MobaXShells/img1.png)
 
-We can create a new SSHTunnel that will send the reverse shell to my kali machine. The "Forwarded port" will be the port that the shell will connect to on Windows, in my case, it will be 9000. The SSH Server section is the IP address, username, and port that SSH is running on. The "Remote Server & Port" will be the loopback address and what port kali will be listening on for the shell (9001)
+We can create a new SSHTunnel that will send the reverse shell to my kali machine. The "Forwarded port" will be the port that the shell will connect to on Windows, in my case, it will be 9000. The SSH Server section is the IP address, username, and port that SSH is running on Kali. My Kali's IP was `192.168.1.10` and SSH was on 22. The "Remote Server & Port" will be the loopback address and what port kali will be listening on for the shell (9001)
 
 ![MobaX](https://raw.githubusercontent.com/0xZon/0xZon.github.io/main/assets/img/MobaXShells/img2.png)
 
