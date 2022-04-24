@@ -1,5 +1,5 @@
 ---
 layout: page
 title: About me
-subtitle: I have a passion for InfoSec 
+subtitle: I make computers misbehave 
 ---
