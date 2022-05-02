@@ -8,7 +8,7 @@ tags: [HTB]
 ![Explore](https://raw.githubusercontent.com/0xZon/0xZon.github.io/main/assets/img/nunchucks.png)
 
 
-| Name | Explore |
+| Name | Nunchucks |
 | :------ |:--- |
 | OS | Linux |
 | RELEASE DATE | 02 Nov 2021 |
