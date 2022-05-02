@@ -2,7 +2,7 @@
 layout: post
 title: HTB Bastard Writeup  
 subtitle: Medium Box
-thumbnail-img: /assets/img/bastard.png
+thumbnail-img: /assets/img/bastard/bastard.png
 tags: [HTB]
 ---
 ![Bastard](https://raw.githubusercontent.com/0xZon/0xZon.github.io/main/assets/img/bastard/bastard.png)
