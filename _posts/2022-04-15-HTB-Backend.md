@@ -8,7 +8,7 @@ tags: [HTB]
 ![Backend](https://raw.githubusercontent.com/0xZon/0xZon.github.io/main/assets/img/backend/backend.png)
 
 
-| Name | Explore |
+| Name | Backend |
 | :------ |:--- |
 | OS | Linux |
 | RELEASE DATE | 12 Apr 2022 |
