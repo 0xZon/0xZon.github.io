@@ -9,7 +9,7 @@ tags: [HTB]
 ![Explore](https://raw.githubusercontent.com/0xZon/0xZon.github.io/main/assets/img/driver.png)
 
 
-| Name | Explore |
+| Name | Driver |
 | :------ |:--- |
 | OS | Windows |
 | RELEASE DATE | 02 Oct 2021 |
