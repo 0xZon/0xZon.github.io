@@ -10,7 +10,7 @@ tags: [HTB]
 ![Doctor](https://raw.githubusercontent.com/0xZon/0xZon.github.io/main/assets/img/doctor/doctor.png)
 
 
-| Name | Explore |
+| Name | Doctor |
 | :------ |:--- |
 | OS | Linux |
 | RELEASE DATE | 26 Sept 2020 |
