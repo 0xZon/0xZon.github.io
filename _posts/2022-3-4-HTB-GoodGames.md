@@ -10,7 +10,7 @@ tags: [HTB]
 ![GoodGames](https://raw.githubusercontent.com/0xZon/0xZon.github.io/main/assets/img/goodgames/logo.png)
 
 
-| Name | Return |
+| Name | GoodGames |
 | :------ |:--- |
 | OS | Linux |
 | RELEASE DATE | 21 Feb 2022 |
