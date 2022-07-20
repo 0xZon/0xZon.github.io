@@ -149,7 +149,7 @@ I tried using Daniels credentials to login but was prompted with a box that said
 ![Pandorad](https://raw.githubusercontent.com/0xZon/0xZon.github.io/main/assets/img/pandora/277c8c96364b4c34b730901557fbc9b8.png)
 
 
-I was able to use the api to do lots of cool things like dump users and passwords. Here is the documentation for refrence [https://pandorafms.com/manual/en/documentation/08\_technical\_reference/02\_annex\_externalapi](https://pandorafms.com/manual/en/documentation/08_technical_reference/02_annex_externalapi)
+I was able to use the api to do lots of cool things like dump users and passwords. Here is the documentation for reference  [https://pandorafms.com/manual/en/documentation/08\_technical\_reference/02\_annex\_externalapi](https://pandorafms.com/manual/en/documentation/08_technical_reference/02_annex_externalapi)
 
 ![Pandorad](https://raw.githubusercontent.com/0xZon/0xZon.github.io/main/assets/img/pandora/c05577c4241b4f4bab2fdbebec16e592.png)
 
@@ -157,9 +157,9 @@ I was able to use the api to do lots of cool things like dump users and password
 
 I tried to rack these passwords but had no luck.
 
-After looking around I was able to find an article describing a SQL Injection, we might be able leverage this and get the admins `PHPSESSID` https://blog.sonarsource.com/pandora-fms-742-critical-code-vulnerabilities-explained
+After looking around I was able to find an article describing a SQL Injection, we might be able to leverage this and get the admins `PHPSESSID` https://blog.sonarsource.com/pandora-fms-742-critical-code-vulnerabilities-explained
 
-The article describes that there is a paramater called `session_id` inside `/include/chart_generator.php`. We can do a quick test using `sqlmap -u 127.0.0.1:32000/pandora_console/include/chart_generator.php?session_id=123` to confirm.
+The article describes that there is a parameter called `session_id` inside `/include/chart_generator.php`. We can do a quick test using `sqlmap -u 127.0.0.1:32000/pandora_console/include/chart_generator.php?session_id=123` to confirm.
 
 ```
 Parameter: session_id (GET)
@@ -187,7 +187,7 @@ Then after making that request I now have the admins cookie and can bypass the l
 
 ![Pandorad](https://raw.githubusercontent.com/0xZon/0xZon.github.io/main/assets/img/pandora/cd668c8e843742efb40fb3175b20f935.png)
 
-Under admin tools I can see that I have access to upload a file, since this web app is running php I used a php reverse shell replacing the IP and PORT to my own https://github.com/pentestmonkey/php-reverse-shell/blob/master/php-reverse-shell.php
+Under admin tools, I can see that I have access to upload a file, since this web app is running php I used a php reverse shell replacing the IP and PORT to my own https://github.com/pentestmonkey/php-reverse-shell/blob/master/php-reverse-shell.php
 
 ![Pandorad](https://raw.githubusercontent.com/0xZon/0xZon.github.io/main/assets/img/pandora/3c073d133ffa462780d3e5919359b1df.png)
 
