@@ -1,5 +1,5 @@
 ---
 layout: page
 title: About me
-subtitle: I make computers misbehave 
 ---
+I'm an application security engineer and red teamer. I try to hack all the things.
