@@ -11,6 +11,24 @@ tags: [WIFI]
 
 A WPA handshake is a series of frames that are sent between a AP and a client to authenticate the client. These frame have the ability to be cracked using various tools. Once these frames are crack the WIFI password can be obtained for that network. I ran  `sudo airmon-ng start INTERFACE` before starting this attack chain
 
+I started off with a basic capture to see what AP's are around. I have a access point of Zon that I will be targeting 
+
+```
+sudo airodump-ng wlan0mon
+
+CH  8 ][ Elapsed: 0 s ][ 2023-04-28 22:17 
+
+ BSSID              PWR  Beacons    #Data, #/s  CH   MB   ENC CIPHER  AUTH ESSID
+
+ 34:98:B5:47:AB:AE   -1        0        0    0   8   -1                    <length:  0>                                                    
+ 34:98:B5:3E:51:A0  -52        3        0    0   9  130   WPA2 CCMP   PSK  Woot                                                        
+ 60:38:E0:93:28:43  -60        1        0    0   7  130   WPA2 CCMP   PSK  Dog                                                        
+ 30:46:9A:A6:34:76  -27        5        0    0   1  130   WPA2 CCMP   PSK  Zon                                                            
+ D2:B4:F7:BE:12:DA  -63        2        0    0   1  360   WPA2 CCMP   PSK  <length:  0>                                                    
+ 5C:64:8E:BB:B3:31  -65        3        0    0   1  405   WPA2 CCMP   PSK  SUMMER                                                 
+ 5C:64:8E:BB:B4:75  -65        4        0    0   1  405   WPA2 CCMP   PSK  Snow  
+```
+
 ### Handshake Capture With De-Auth
 One way to capture a WPA handshake is to DeAuth an already connected client. In the snip below I ran `airodump-ng` to target the bssid of my router `--bssid`, on channel 1 `-c 1`, and wrote it to a file called zon.cap `-w zon.cap`. The output shows that there is one client connected to the Zon AP and is sending frames.
 
