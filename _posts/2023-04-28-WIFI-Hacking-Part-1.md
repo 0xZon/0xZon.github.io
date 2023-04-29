@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Wifi Hacking Part 1
-subtitle: deauthentication & WPA handshake cracking
+subtitle: Deauthentication & WPA Handshake Cracking
 tags: [WIFI]
 ---
 
