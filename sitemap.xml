@@ -8,213 +8,218 @@
 
 
 <url>
-  <loc>https://0xzon.github.io/</loc>
-  <lastmod>2023-05-03T05:41:26+00:00</lastmod>
+  <loc>https://blog.0xzon.dev/</loc>
+  <lastmod>2023-05-03T21:08:57+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
-  <loc>https://0xzon.github.io/aboutme/</loc>
-  <lastmod>2023-05-03T05:41:26+00:00</lastmod>
+  <loc>https://blog.0xzon.dev/aboutme/</loc>
+  <lastmod>2023-05-03T21:08:57+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://0xzon.github.io/2023-04-28-WIFI-Hacking-Part-1/</loc>
-  <lastmod>2023-05-03T05:41:26+00:00</lastmod>
+  <loc>https://blog.0xzon.dev/2023-05-03-Double-Pivot-Using-Chisel/</loc>
+  <lastmod>2023-05-03T21:08:57+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://0xzon.github.io/tags/</loc>
-  <lastmod>2023-05-03T05:41:26+00:00</lastmod>
+  <loc>https://blog.0xzon.dev/tags/</loc>
+  <lastmod>2023-05-03T21:08:57+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://0xzon.github.io/2023-04-15-HTB-WIDE/</loc>
-  <lastmod>2023-05-03T05:41:26+00:00</lastmod>
+  <loc>https://blog.0xzon.dev/2023-04-28-WIFI-Hacking-Part-1/</loc>
+  <lastmod>2023-05-03T21:08:57+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://0xzon.github.io/2023-04-05-miniBadgeTester/</loc>
-  <lastmod>2023-05-03T05:41:26+00:00</lastmod>
+  <loc>https://blog.0xzon.dev/2023-04-15-HTB-WIDE/</loc>
+  <lastmod>2023-05-03T21:08:57+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://0xzon.github.io/2022-11-25-ProvingGroundsPractice-Squid/</loc>
-  <lastmod>2023-05-03T05:41:26+00:00</lastmod>
+  <loc>https://blog.0xzon.dev/2023-04-05-miniBadgeTester/</loc>
+  <lastmod>2023-05-03T21:08:57+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://0xzon.github.io/2022-10-04-ProvingGroundsPractice-Sorcerer/</loc>
-  <lastmod>2023-05-03T05:41:26+00:00</lastmod>
+  <loc>https://blog.0xzon.dev/2022-11-25-ProvingGroundsPractice-Squid/</loc>
+  <lastmod>2023-05-03T21:08:57+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://0xzon.github.io/page2/</loc>
-  <lastmod>2023-05-03T05:41:26+00:00</lastmod>
+  <loc>https://blog.0xzon.dev/page2/</loc>
+  <lastmod>2023-05-03T21:08:57+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://0xzon.github.io/2022-02-11-DiscordC2/</loc>
-  <lastmod>2023-05-03T05:41:26+00:00</lastmod>
+  <loc>https://blog.0xzon.dev/2022-02-11-DiscordC2/</loc>
+  <lastmod>2023-05-03T21:08:57+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://0xzon.github.io/2022-04-10-CVE-2022-27475/</loc>
-  <lastmod>2023-05-03T05:41:26+00:00</lastmod>
+  <loc>https://blog.0xzon.dev/2022-04-10-CVE-2022-27475/</loc>
+  <lastmod>2023-05-03T21:08:57+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://0xzon.github.io/2022-09-30-HTB-Optimum/</loc>
-  <lastmod>2023-05-03T05:41:26+00:00</lastmod>
+  <loc>https://blog.0xzon.dev/2022-09-30-HTB-Optimum/</loc>
+  <lastmod>2023-05-03T21:08:57+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://0xzon.github.io/2022-09-15-HTB-Shocker/</loc>
-  <lastmod>2023-05-03T05:41:26+00:00</lastmod>
+  <loc>https://blog.0xzon.dev/2022-09-15-HTB-Shocker/</loc>
+  <lastmod>2023-05-03T21:08:57+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://0xzon.github.io/2022-09-15-HTB-Legacy/</loc>
-  <lastmod>2023-05-03T05:41:26+00:00</lastmod>
+  <loc>https://blog.0xzon.dev/2022-09-15-HTB-Legacy/</loc>
+  <lastmod>2023-05-03T21:08:57+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://0xzon.github.io/2022-09-14-HTB-Lame/</loc>
-  <lastmod>2023-05-03T05:41:26+00:00</lastmod>
+  <loc>https://blog.0xzon.dev/2022-09-14-HTB-Lame/</loc>
+  <lastmod>2023-05-03T21:08:57+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://0xzon.github.io/2022-10-01-HTB-Bashed/</loc>
-  <lastmod>2023-05-03T05:41:26+00:00</lastmod>
+  <loc>https://blog.0xzon.dev/2022-10-01-HTB-Bashed/</loc>
+  <lastmod>2023-05-03T21:08:57+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://0xzon.github.io/2022-09-28-HTB-Devel/</loc>
-  <lastmod>2023-05-03T05:41:26+00:00</lastmod>
+  <loc>https://blog.0xzon.dev/2022-09-28-HTB-Devel/</loc>
+  <lastmod>2023-05-03T21:08:57+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://0xzon.github.io/2022-07-09-HTB-Pandora/</loc>
-  <lastmod>2023-05-03T05:41:26+00:00</lastmod>
+  <loc>https://blog.0xzon.dev/2022-07-09-HTB-Pandora/</loc>
+  <lastmod>2023-05-03T21:08:57+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://0xzon.github.io/2022-05-02-HTB-Arctic/</loc>
-  <lastmod>2023-05-03T05:41:26+00:00</lastmod>
+  <loc>https://blog.0xzon.dev/2022-05-02-HTB-Arctic/</loc>
+  <lastmod>2023-05-03T21:08:57+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://0xzon.github.io/2022-05-01-HTB-Bastard/</loc>
-  <lastmod>2023-05-03T05:41:26+00:00</lastmod>
+  <loc>https://blog.0xzon.dev/2022-05-01-HTB-Bastard/</loc>
+  <lastmod>2023-05-03T21:08:57+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://0xzon.github.io/2022-04-15-HTB-Backend/</loc>
-  <lastmod>2023-05-03T05:41:26+00:00</lastmod>
+  <loc>https://blog.0xzon.dev/2022-04-15-HTB-Backend/</loc>
+  <lastmod>2023-05-03T21:08:57+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://0xzon.github.io/2022-03-22-HTB-Doctor/</loc>
-  <lastmod>2023-05-03T05:41:26+00:00</lastmod>
+  <loc>https://blog.0xzon.dev/2022-03-22-HTB-Doctor/</loc>
+  <lastmod>2023-05-03T21:08:57+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://0xzon.github.io/2022-03-17-HTB-Sauna/</loc>
-  <lastmod>2023-05-03T05:41:26+00:00</lastmod>
+  <loc>https://blog.0xzon.dev/2022-03-17-HTB-Sauna/</loc>
+  <lastmod>2023-05-03T21:08:57+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://0xzon.github.io/2022-03-16-HTB-Ransom/</loc>
-  <lastmod>2023-05-03T05:41:26+00:00</lastmod>
+  <loc>https://blog.0xzon.dev/2022-03-16-HTB-Ransom/</loc>
+  <lastmod>2023-05-03T21:08:57+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://0xzon.github.io/2022-03-11-HTB-SteamCloud/</loc>
-  <lastmod>2023-05-03T05:41:26+00:00</lastmod>
+  <loc>https://blog.0xzon.dev/2022-03-11-HTB-SteamCloud/</loc>
+  <lastmod>2023-05-03T21:08:57+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://0xzon.github.io/2022-03-04-HTB-GoodGames/</loc>
-  <lastmod>2023-05-03T05:41:26+00:00</lastmod>
+  <loc>https://blog.0xzon.dev/2022-03-04-HTB-GoodGames/</loc>
+  <lastmod>2023-05-03T21:08:57+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://0xzon.github.io/2022-03-01-HTB-Driver/</loc>
-  <lastmod>2023-05-03T05:41:26+00:00</lastmod>
+  <loc>https://blog.0xzon.dev/2022-03-01-HTB-Driver/</loc>
+  <lastmod>2023-05-03T21:08:57+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://0xzon.github.io/2022-02-11-HTB-Horizontall/</loc>
-  <lastmod>2023-05-03T05:41:26+00:00</lastmod>
+  <loc>https://blog.0xzon.dev/2022-02-11-HTB-Horizontall/</loc>
+  <lastmod>2023-05-03T21:08:57+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://0xzon.github.io/2022-01-17-HTB-Return/</loc>
-  <lastmod>2023-05-03T05:41:26+00:00</lastmod>
+  <loc>https://blog.0xzon.dev/2022-01-17-HTB-Return/</loc>
+  <lastmod>2023-05-03T21:08:57+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://0xzon.github.io/2022-01-17-HTB-Logforge/</loc>
-  <lastmod>2023-05-03T05:41:26+00:00</lastmod>
+  <loc>https://blog.0xzon.dev/2022-01-17-HTB-Logforge/</loc>
+  <lastmod>2023-05-03T21:08:57+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://0xzon.github.io/2022-01-09-HTB-Previse/</loc>
-  <lastmod>2023-05-03T05:41:26+00:00</lastmod>
+  <loc>https://blog.0xzon.dev/2022-01-09-HTB-Previse/</loc>
+  <lastmod>2023-05-03T21:08:57+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://0xzon.github.io/2021-11-20-HTB-BountyHunter/</loc>
-  <lastmod>2023-05-03T05:41:26+00:00</lastmod>
+  <loc>https://blog.0xzon.dev/2021-11-20-HTB-BountyHunter/</loc>
+  <lastmod>2023-05-03T21:08:57+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://0xzon.github.io/2021-11-08-HTB-Spooktrol/</loc>
-  <lastmod>2023-05-03T05:41:26+00:00</lastmod>
+  <loc>https://blog.0xzon.dev/2021-11-08-HTB-Spooktrol/</loc>
+  <lastmod>2023-05-03T21:08:57+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://0xzon.github.io/2021-11-04-HTB-Nunchucks/</loc>
-  <lastmod>2023-05-03T05:41:26+00:00</lastmod>
+  <loc>https://blog.0xzon.dev/2021-11-04-HTB-Nunchucks/</loc>
+  <lastmod>2023-05-03T21:08:57+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://0xzon.github.io/2021-10-30-HTB-Explore/</loc>
-  <lastmod>2023-05-03T05:41:26+00:00</lastmod>
+  <loc>https://blog.0xzon.dev/2021-10-30-HTB-Explore/</loc>
+  <lastmod>2023-05-03T21:08:57+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://0xzon.github.io/2022-04-19-Getting-Shells-Past-NAT/</loc>
-  <lastmod>2023-05-03T05:41:26+00:00</lastmod>
+  <loc>https://blog.0xzon.dev/2022-04-19-Getting-Shells-Past-NAT/</loc>
+  <lastmod>2023-05-03T21:08:57+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://0xzon.github.io/2022-10-03-ProvingGroundsPractice-Zino/</loc>
-  <lastmod>2023-05-03T05:41:26+00:00</lastmod>
+  <loc>https://blog.0xzon.dev/2022-10-04-ProvingGroundsPractice-Sorcerer/</loc>
+  <lastmod>2023-05-03T21:08:57+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://0xzon.github.io/page3/</loc>
-  <lastmod>2023-05-03T05:41:26+00:00</lastmod>
+  <loc>https://blog.0xzon.dev/2022-10-03-ProvingGroundsPractice-Zino/</loc>
+  <lastmod>2023-05-03T21:08:57+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://0xzon.github.io/page4/</loc>
-  <lastmod>2023-05-03T05:41:26+00:00</lastmod>
+  <loc>https://blog.0xzon.dev/page3/</loc>
+  <lastmod>2023-05-03T21:08:57+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://blog.0xzon.dev/page4/</loc>
+  <lastmod>2023-05-03T21:08:57+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>https://0xzon.github.io/page5/</loc>
-  <lastmod>2023-05-03T05:41:26+00:00</lastmod>
+  <loc>https://blog.0xzon.dev/page5/</loc>
+  <lastmod>2023-05-03T21:08:57+00:00</lastmod>
   <priority>0.41</priority>
 </url>
 <url>
-  <loc>https://0xzon.github.io/page6/</loc>
-  <lastmod>2023-05-03T05:41:26+00:00</lastmod>
+  <loc>https://blog.0xzon.dev/page6/</loc>
+  <lastmod>2023-05-03T21:08:57+00:00</lastmod>
   <priority>0.33</priority>
 </url>
 <url>
-  <loc>https://0xzon.github.io/page7/</loc>
-  <lastmod>2023-05-03T05:41:26+00:00</lastmod>
+  <loc>https://blog.0xzon.dev/page7/</loc>
+  <lastmod>2023-05-03T21:08:57+00:00</lastmod>
   <priority>0.26</priority>
 </url>
 
