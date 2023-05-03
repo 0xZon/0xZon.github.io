@@ -133,7 +133,7 @@ footer-hover-col: "#008AFF"
 gtag: "G-V5BYXVXLF7"
 
 # Fill in your Google Analytics ID to track your website using Google Analytics
-google_analytics: "GTM-NWGXGB7 "
+google_analytics: "GTM-NWGXGB7"
 
 # Fill in your Cloudflare Analytics beacon token to track your website using Cloudflare Analytics
 #cloudflare_analytics: ""
