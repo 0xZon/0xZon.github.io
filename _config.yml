@@ -133,13 +133,13 @@ footer-hover-col: "#0085A1"
 gtag: "G-JZYH341VVV"
 
 # Fill in your Google Analytics ID to track your website using Google Analytics
-#google_analytics: "GTM-NWGXGB7"
+google_analytics: "G-JZYH341VVV"
 
 # Fill in your Cloudflare Analytics beacon token to track your website using Cloudflare Analytics
 #cloudflare_analytics: ""
 
 # Google Tag Manager ID
-#gtm: "GTM-NWGXGB7"
+gtm: "G-JZYH341VVV"
 
 # Matomo (aka Piwik) Web statistics
 # Uncomment the following section to enable Matomo. The opt-out parameter controls
