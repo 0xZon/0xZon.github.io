@@ -244,10 +244,9 @@ exclude:
   - screenshot.png
   - docs/
   
-url: "https://blog.0xzon.dev"
+url: "https://blog.0xzon.dev" # the base hostname & protocol for your site
 plugins:
-  - jekyll-paginate
   - jekyll-sitemap
+  - jekyll-paginate
   - jekyll-seo-tag
-# 2fc73a3a967e97599c9763d05e564189
 
