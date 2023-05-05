@@ -243,7 +243,8 @@ exclude:
   - README.md
   - screenshot.png
   - docs/
-
+  
+  url: "https://blog.0xzon.dev" #the base hostname & protocol for your site
 plugins:
   - jekyll-paginate
   - jekyll-sitemap
