@@ -83,8 +83,5 @@ WORKSTATION$:des-cbc-md5:19a7e3e96ef20d6d
 [*] Cleaning up...
 ```
 
-### Other SPN's Worth Noting
-If a user or service account 
-
 ## Summary
 While constrained delegation is intended to be a secure feature, it can become a vulnerability if not properly configured. Attackers can exploit misconfigured delegation rights to gain access to valuable data or escalate their privileges within a network. Therefore, it's crucial to understand how constrained delegation works and to ensure it is properly configured to prevent attackers from abusing it.
