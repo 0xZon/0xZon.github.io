@@ -23,7 +23,7 @@ The TGT could be used with impackets dcsync.py script to perform a DCSync, simul
 ### Enumeration
 Using `get-doaminuser` via [PowerView.ps1](https://github.com/PowerShellMafia/PowerSploit/blob/master/Recon/PowerView.ps1) shows them `msds-allowedtodelegateto` property set. On a engagement this could also be discovered via `bloodhound` 
 
-![[Pasted image 20230508103605.png]]
+![img](https://raw.githubusercontent.com/0xZon/0xZon.github.io/main/assets/img/get-domainuserFrodo.png)
 
 ### Exploitation With Impacket
 Once the account was identified a service ticket was generated with `getST.py`, impersonating the domain admin
