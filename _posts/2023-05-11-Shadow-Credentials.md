@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Abusing the msds-KeyCredentialLink Propertie in Active Directory: Understanding Shadow Credentials
+title: Abusing the msds-KeyCredentialLink Propertie in Active Directory - Understanding Shadow Credentials
 subtitle: Using Certipy To Exploit msds-KeyCredentialLink Remotley
 tags: [AD]
 ---
