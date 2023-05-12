@@ -19,7 +19,7 @@ There are two requirements that must be present in order to perform this type of
 Below is a basic flow of the attack
 ![img](https://raw.githubusercontent.com/0xZon/0xZon.github.io/main/assets/img/shadowDiag.png)
 # Demo
-*For this demo I will do the exploitation from a remote kali machine rather than on a windows host.
+_For this demo I will do the exploitation from a remote kali machine rather than on a windows host._
 
 In my home lab I set up a new account called `sauron` and gave `frodo` write and read permissions for the attribute `msds-KeyCredentialLink`
 ![img](https://raw.githubusercontent.com/0xZon/0xZon.github.io/main/assets/img/writeshadow.png)
