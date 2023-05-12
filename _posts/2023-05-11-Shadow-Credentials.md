@@ -17,7 +17,9 @@ There are two requirements that must be present in order to perform this type of
 - A compromised account that has rights to the `msds-KeyCredentialLink` attribute to whatever user/computer you want to exploit
 
 Below is a basic flow of the attack
+
 ![img](https://raw.githubusercontent.com/0xZon/0xZon.github.io/main/assets/img/shadowDiag.png)
+
 # Demo
 _For this demo I will do the exploitation from a remote kali machine rather than on a windows host._
 
