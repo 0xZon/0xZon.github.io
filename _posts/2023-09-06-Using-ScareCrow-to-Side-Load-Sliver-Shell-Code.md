@@ -1,7 +1,7 @@
 ---
 layout: post
-title: ScareCrow 
-subtitle: Using ScareCrow to Side Load Sliver Shell Code
+title: Using ScareCrow to Side Load Sliver Shell Code 
+#subtitle: Using ScareCrow to Side Load Sliver Shell Code
 #thumbnail-img: /assets/img/nunchucks.png
 tags: [SLIVER]
 ---
