@@ -74,7 +74,7 @@ Then I used `ScareCrow` to put generate a control panel applet that will load th
 
 With everything set up I transferred the `.cpl` file over to the victim machine and then executed it
 
-![[Pasted image 20230515224057.png]]
+![scarecrow](https://raw.githubusercontent.com/0xZon/0xZon.github.io/main/assets/img/scarecrow.png)
 
 Back on the Sliver Server a new beacon checks in
 ```
