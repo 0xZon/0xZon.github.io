@@ -7,7 +7,7 @@ tags: [HTB]
 ---
 
 | Name | Spooktrol |
-| :------ |:--- |
+| :--- |:--- |
 | OS | Linux |
 | DIFFICULTY | Easy |
 ## Reconnaissance
