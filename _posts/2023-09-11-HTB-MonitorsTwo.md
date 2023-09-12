@@ -6,10 +6,12 @@ thumbnail-img: /assets/img/monitorstwo/monitorstwo.png
 tags: [HTB]
 ---
 
-| Name | Spooktrol |
-| :--- |:--- |
+| Name | MonitorsTwo |
+| :------ |:--- |
 | OS | Linux |
 | DIFFICULTY | Easy |
+
+
 ## Reconnaissance
 The IP address given for MonitorsTwo is 10.10.11.211. I will always start my reconnaissance with a `namp` scan. It will return me a list of listening ports on the machine to test.
 
