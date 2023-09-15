@@ -43,7 +43,7 @@ Service Info: OSs: Unix, Linux; CPE: cpe:/o:linux:linux_kernel
 ```
 
 ## FTP TCP/21
-The `nmap` scan revealed that anonymous login is enabled on this server, hosting several files. My approach is to connect to the server and download everything available. This might contain sensitive data or information leading to further access. The `wget` command, commonly used with web servers, can also be employed for FTP downloads. The command below achieves this:
+The `nmap` scan revealed that anonymous login is enabled on this server, hosting several files. My approach is to connect to the server and download everything available. This server might contain sensitive data or information leading to further access. The `wget` command, commonly used with web servers, can also be employed for FTP downloads. The command below achieves this:
 ```
 [zonifer@dell wifinetic]$ wget -m ftp://anonymous@10.10.11.247   
 ...
