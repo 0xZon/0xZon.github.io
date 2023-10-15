@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Mejiro Reflected XSS Via Remote File Inclusion
+subtitle: CVE
 thumbnail-img: /assets/img/CVE-2022-27475/bug.png
 tags: [CVE]
 ---
