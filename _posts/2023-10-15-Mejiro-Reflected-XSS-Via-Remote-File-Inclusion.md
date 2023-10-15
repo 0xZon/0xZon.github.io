@@ -55,7 +55,7 @@ if ($download) {
 
 Notice that there is no sanitization between when the data is extracted and displayed to the user. Input sanitization, also known as input validation, is the process of inspecting and cleaning data received from untrusted or unvalidated sources to ensure it is safe. The primary goal of input sanitization is to protect against malicious injection-type attacks. 
 
-As an attacker, if I can manipulate variables like $comment, $description, or any other field within $exif_info, it could result in a cross-site scripting vulnerability. This bug alone does not have an impact because all the photos here are controlled by the author. There is no upload function; they have to be manually placed on the file system.
+As an attacker, if I can manipulate variables like `$comment`, `$description`, or any other field within `$exif_info`, it could result in a cross-site scripting vulnerability. This bug alone does not have an impact because all the photos here are controlled by the author. There is no upload function; they have to be manually placed on the file system.
 
 However, I was able to find a remote file inclusion vulnerability in `index.php` on the `photo` variable (it is worth noting that LFI was not possible and it would only load images). By exploiting this vulnerability, I was able to host a malicious file that contained embedded JavaScript within its metadata. When the application processes my malicious file, it extracts the JavaScript, executing it when someone visits the page.
 ```php
