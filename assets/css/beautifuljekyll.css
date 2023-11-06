@@ -862,6 +862,7 @@ pre code {
 }
 
 pre {
+  overflow: auto; /* I added this */
   font-size: 0.875rem;
   line-height: 1.5em;
   border-radius: 0.25rem;
