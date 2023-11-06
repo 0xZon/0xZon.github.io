@@ -24,29 +24,61 @@ I proceeded to contact our Okta representative to inform them about the issue. W
 A few days later, we received the following response:
 
 ```
-"As a web application, Okta relies on the security of the browser and operating system environment to protect against endpoint attacks such as malicious browser plugins or cookie stealing.  If an attacker has a foothold on your endpoint that would allow them access to user cookies, they would also have the ability to deploy malware or other methods to compromise the downstream applications.  We recommend using fleet management tools such as JAMF to ensure your endpoints are appropriately protected and hardened.  
+"As a web application, Okta relies on the security of the browser
+and operating system environment to protect against endpoint
+attacks such as malicious browser plugins or cookie stealing.
+If an attacker has a foothold on your endpoint that would allow 
+them access to user cookies, they would also have the ability to
+deploy malware or other methods to compromise the downstream 
+applications.  We recommend using fleet management tools such as 
+JAMF to ensure your endpoints are appropriately protected and 
+hardened.  
   
-Okta is monitoring the development of session cookie protections such as Token Binding. While browser-based security options mature, Customers may also wish to use Okta’s Device Trust capability to ensure that critical applications are only accessed from managed systems, or integrate Okta system logs with their SIEM tool to allow for aggregation of cloud service logs and detection of cookie-reuse attacks."
+Okta is monitoring the development of session cookie protections 
+such as Token Binding. While browser-based security options 
+mature, Customers may also wish to use Okta’s Device Trust 
+capability to ensure that critical applications are only accessed 
+from managed systems, or integrate Okta system logs with their 
+SIEM tool to allow for aggregation of cloud service logs and 
+detection of cookie-reuse attacks."
 ```
 
 To me, this response was unacceptable. Browser and OS security alone do not prevent cookies from being stolen, and fleet management tools are hardly a comprehensive solution. Furthermore, placing the responsibility for detecting session hijacking on the consumer is an impractical approach, as not every customer possesses a mature Security Information and Event Management (SIEM) system. Even in cases where organizations have robust security measures in place, like BeyondTrust, attackers still manage to hijack sessions. None of the remedies proposed by Okta would have prevented this breach.
 
 I responded with the following:
 ```
-The issues that we have is a user could go to a legitimate site that has been compromised via XSS or another way and their cookies would be stolen. EDR would not do anything to prevent this and each company that uses OKTA would need to have a mature SIEM system and create detection. Is there a control in OKTA to de auth someone if this is observed?
+The issues that we have is a user could go to a legitimate site
+that has been compromised via XSS or another way and their cookies
+would be stolen. EDR would not do anything to prevent this and 
+each company that uses OKTA would need to have a mature SIEM 
+system and create detection. Is there a control in OKTA to de auth
+someone if this is observed?
 
-What we would like to see is a better solution where OKTA is generating an alarm that says “Hey this user agent/IP changed something suspicious is occurring” and if that alarm exists have an option that could be set by the company to de-authenticate the user.
+What we would like to see is a better solution where OKTA is 
+generating an alarm that says “Hey this user agent/IP changed 
+something suspicious is occurring” and if that alarm exists have 
+an option that could be set by the company to de-authenticate the 
+user.
 
-This is a current risk and adversaries are stealing cookies and breaching companies using this technique. There is a technique documented by MITRE https://attack.mitre.org/techniques/T1539/
+This is a current risk and adversaries are stealing cookies and 
+breaching companies using this technique. There is a technique 
+documented by MITRE https://attack.mitre.org/techniques/T1539/
 ```
 
 Three weeks later, Okta replied with the following:
 ```
-Okta is actively working towards the mitigation of session cookie theft by adding session cookie protections such as Token Binding; however, Okta does not have an estimated timeline for completion.
+Okta is actively working towards the mitigation of session cookie
+theft by adding session cookie protections such as Token Binding;
+however, Okta does not have an estimated timeline for completion.
 
-Customers that have integrated Okta system logs with their SIEM tool can leverage Okta's API to terminate session where suspicious activity related to an Okta user is detected. 
+Customers that have integrated Okta system logs with their SIEM 
+tool can leverage Okta's API to terminate session where suspicious 
+activity related to an Okta user is detected. 
 
-In addition, current customers can leverage Okta's Device Trust capabilities, which enables organizations to protect their sensitive corporate resources by allowing access from only managed devices.
+In addition, current customers can leverage Okta's Device Trust 
+capabilities, which enables organizations to protect their 
+sensitive corporate resources by allowing access from only managed 
+devices.
 ```
 
 Okta suggested that their Device Trust capabilities, combined with ongoing work on session cookie theft, would address the issue. Come to find out it was not. Okta had **17** months to remediate this vulnerability, and sadly it took a breach for them to make quick work of the vulnerability.  
