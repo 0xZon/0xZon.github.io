@@ -110,10 +110,8 @@ img {
   margin-top: -1.5625rem;
 }
 
-.markdown-preview.markdown-preview {
-       pre, code {
-            white-space: pre-wrap;
-       }
+pre {
+    white-space: pre-wrap;
 }
 
 /* Comments */
