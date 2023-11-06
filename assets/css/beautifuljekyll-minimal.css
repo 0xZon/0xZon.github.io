@@ -2,10 +2,8 @@
   padding-bottom: 3.125rem;
 }
 
-.markdown-preview.markdown-preview {
-       pre, code {
-            white-space: pre-wrap;
-       }
+pre {
+    white-space: pre-wrap;
 }
 
 footer.footer-min {
