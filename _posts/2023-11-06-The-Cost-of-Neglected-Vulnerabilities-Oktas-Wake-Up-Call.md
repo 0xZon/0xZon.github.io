@@ -1,7 +1,6 @@
 ---
 layout: post
 title: The Cost of Neglected Vulnerabilities Okta's Wake-Up Call 
-subtitle: .
 tags: [VULN]
 ---
 
