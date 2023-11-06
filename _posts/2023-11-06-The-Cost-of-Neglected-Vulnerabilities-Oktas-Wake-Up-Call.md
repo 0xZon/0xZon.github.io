@@ -52,3 +52,5 @@ In addition, current customers can leverage Okta's Device Trust capabilities, wh
 
 
 Okta suggested that their Device Trust capabilities, combined with ongoing work on session cookie theft, would address the issue. Come to find out it was not. Okta had **17** months to remediate this vulnerability, and sadly it took a breach for them to make quick work of the vulnerability.  
+
+In the face of ongoing cybersecurity threats, including the alarming rise in breaches facilitated by Adversary-in-the-Middle (AitM) attacks for cookie stealing and business email compromises, the importance of security research and swift vendor response cannot be overstated. The Okta breach serves as a stark reminder that timely identification and remediation of vulnerabilities are essential in safeguarding data and systems. 
