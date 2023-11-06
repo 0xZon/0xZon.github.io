@@ -2,10 +2,6 @@
   padding-bottom: 3.125rem;
 }
 
-pre {
-    white-space: pre-wrap;
-}
-
 footer.footer-min {
   position: fixed;
   bottom: 0;
