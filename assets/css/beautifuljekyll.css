@@ -10,6 +10,10 @@ html {
   font-size: 100%
 }
 
+code {
+  white-space : pre-wrap !important;
+}
+
 body {
   font-family: 'Lora', 'Times New Roman', serif;
   font-size: 1.125rem;
