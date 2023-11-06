@@ -863,10 +863,12 @@ pre code {
 
 pre {
   overflow: auto; /* I added this */
-  font-size: 0.875rem;
-  line-height: 1.5em;
-  border-radius: 0.25rem;
-  padding: 0.59375rem;
+  padding: 15px;
+  margin-bottom: 0;
+  font-size: 14px;
+ /* white-space: pre-wrap; I deleted this
+  word-wrap: break-word;  and this
+  word-break: break-all; and also this */ 
 }
 .highlight pre {
   border: none;
