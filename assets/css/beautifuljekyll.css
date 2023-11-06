@@ -10,6 +10,8 @@ html {
   font-size: 100%
 }
 
+
+
 body {
   font-family: 'Lora', 'Times New Roman', serif;
   font-size: 1.125rem;
@@ -106,6 +108,10 @@ img {
 .linked-section {
   padding-top: 3.75rem;
   margin-top: -1.5625rem;
+}
+
+.highlight pre{
+  white-space: pre-wrap;
 }
 
 /* Comments */
