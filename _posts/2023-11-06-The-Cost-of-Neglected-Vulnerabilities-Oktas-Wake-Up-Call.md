@@ -37,6 +37,7 @@ managed systems, or integrate Okta system logs with their SIEM tool to allow for
 aggregation of cloud service logs and detection of cookie-reuse attacks."
 ```
 
+
 To me, this response was unacceptable. Browser and OS security alone do not prevent 
 cookies from being stolen, and fleet management tools are hardly a comprehensive 
 solution. Furthermore, placing the responsibility for detecting session hijacking on 
@@ -63,8 +64,20 @@ using this technique. There is a technique documented by MITRE
 https://attack.mitre.org/techniques/T1539/
 ```
 
+
 Three weeks later, Okta replied with the following:
-`Okta is actively working towards the mitigation of session cookie theft by adding session cookie protections such as Token Binding; however, Okta does not have an estimated timeline for completion. Customers that have integrated Okta system logs with their SIEM tool can leverage Okta's API to terminate session where suspicious activity related to an Okta user is detected.  In addition, current customers can leverage Okta's Device Trust capabilities, which enables organizations to protect their sensitive corporate resources by allowing access from only managed devices.`
+```
+Okta is actively working towards the mitigation of session cookie theft by adding
+session cookie protections such as Token Binding; however, Okta does not have an
+estimated timeline for completion.
+
+Customers that have integrated Okta system logs with their SIEM tool can leverage Okta's
+API to terminate session where suspicious activity related to an Okta user is detected. 
+
+In addition, current customers can leverage Okta's Device Trust capabilities, which
+enables organizations to protect their sensitive corporate resources by allowing access
+from only managed devices.
+```
 
 Okta suggested that their Device Trust capabilities, combined with ongoing work on session cookie theft, would address the issue. Come to find out it was not. Okta had **17** months to remediate this vulnerability, and sadly it took a breach for them to make quick work of the vulnerability.  
 
