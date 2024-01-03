@@ -10,6 +10,7 @@ tags: [THM]
 | OS | Windows |
 | DIFFICULTY | Medium |
 
+https://tryhackme.com/room/stealth
 
 ## Recon
 The 'lore' on this machine says to go to its IP on port `8080`. On the page it advertises a "PowerShell Script Analyzer."  
