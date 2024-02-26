@@ -1,9 +1,8 @@
-
 ---
 layout: post
 title: HTB Visual Writeup  
-subtitle: Medium Windows Box
-thumbnail-img: /assets/img/visual/a75ac8ed04e6e728547538bfa41cfc68.png
+subtitle: Medium Box
+thumbnail-img: assets/img/visual/a75ac8ed04e6e728547538bfa41cfc68.png
 tags: [HTB]
 ---
 
