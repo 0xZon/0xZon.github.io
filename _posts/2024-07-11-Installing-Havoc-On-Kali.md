@@ -47,7 +47,7 @@ To start the team server run:
 
 You should see something similar to this:
 
-![Havoc](https://raw.githubusercontent.com/0xZon/0xZon.github.io/main/assets/img/havoc-kali/Pasted image 20240710160132.png)
+![visual](https://raw.githubusercontent.com/0xZon/0xZon.github.io/main/assets/img/havoc-kali/1.png)
 
 ### Building the Client
 With the team server up and running we can now build the client that we will use to connect to it, in the Havoc root run:
@@ -56,12 +56,12 @@ make client-build
 ./havoc client
 ```
 
-![Havoc](https://raw.githubusercontent.com/0xZon/0xZon.github.io/main/assets/img/havoc-kali/Pasted image 20240710163131.png)
+![Havoc](https://raw.githubusercontent.com/0xZon/0xZon.github.io/main/assets/img/havoc-kali/2.png)
 
 
 ### Connecting to the Team Server
 After building the client and running it enter in the host, port (40056), username and password. The default username and password is `Neo:password1234`. If you see the screen below you can now create listeners and payloads!
 
 
-![Havoc](https://raw.githubusercontent.com/0xZon/0xZon.github.io/main/assets/img/havoc-kali/Pasted image 20240710202824.png)
+![Havoc](https://raw.githubusercontent.com/0xZon/0xZon.github.io/main/assets/img/havoc-kali/3.png)
 
