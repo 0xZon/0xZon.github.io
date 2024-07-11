@@ -2,6 +2,7 @@
 layout: post
 title: Installing Havoc C2 On Kali Linux 
 subtitle: Guide
+thumbnail-img: /assets/img/havoc-kali/Havoc.png
 tags: [GUIDE]
 ---
 
