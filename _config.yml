@@ -191,7 +191,6 @@ defaults:
       type: tabs # see `site.collections`
     values:
       layout: page
-      permalink: /:year-:month-:day-:title/
 
 sass:
   style: compressed
