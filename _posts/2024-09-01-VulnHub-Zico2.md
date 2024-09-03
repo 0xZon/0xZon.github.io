@@ -138,7 +138,7 @@ To discover more about the web server's structure, we use a tool called `feroxbu
 
 This scan reveals a `/dbadmin` directory. Navigating to `http://192.168.56.106/dbadmin` shows a directory listing containing a file named `test_dp.php`.
 
-### Exploring phpLiteAdmin
+### Vuln2: phpLiteAdmin
 
 Accessing `http://192.168.56.106/dbadmin/test_db.php` reveals that the server is running `phpLiteAdmin v1.9.3`. We attempt to log in using the common default password `admin`, which succeeds.
 
