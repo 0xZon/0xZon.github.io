@@ -1,4 +1,3 @@
-
 ---
 layout: post
 title: VulnHub Zico2 Writeup  
