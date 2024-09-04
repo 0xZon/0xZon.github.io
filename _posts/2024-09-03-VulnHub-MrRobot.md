@@ -5,6 +5,8 @@ subtitle: Medium Machine
 tags: [VulnHub]
 ---
 
+# VulnHub Mr.Robot Writeup - A Beginner's Guide to Ethical Hacking
+
 # Introduction
 
 In this blog post, I will walk you through a basic penetration testing scenario. We'll use several tools, including `Nmap`, `Feroxbuster`, `Hydra`, and `Metasploit`. The goal is to provide a detailed and beginner-friendly explanation of each step so that you can follow along and understand what's happening at each stage.
