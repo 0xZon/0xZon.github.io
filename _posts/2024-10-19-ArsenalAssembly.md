@@ -12,4 +12,4 @@ tags: [SlideDeck]
 
 [Redirector Config](https://blog.0xzon.dev/2024-07-14-HTTP-Redirector-With-Havoc/)
 
-<embed src="https://0xzon.github.io/assets/Arsenal-Assembly.pdf" width="100%" height="800px" type="application/pdf" />
+<embed src="https://0xzon.github.io/assets/Arsenal-Assembly.pdf" width="100%" height="801px" type="application/pdf" />
