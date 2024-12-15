@@ -1,3 +1,10 @@
+---
+layout: post
+title: Creating POC's For New CVE's
+subtitle: CVE-2024-55560
+tags: [CVE]
+---
+
 ## The Race to Develop PoCs
 When a new CVE is published, it often sparks a race to develop a Proof of Concept (PoC) exploit. The participants in this race are as varied as their motivations: Advanced Persistent Threats (APTs) craft PoCs for malicious purposes, security vendors create them to showcase their product’s defenses, and hobbyists dive in for the thrill of the challenge.
 
